@@ -25,4 +25,20 @@ fn main() {
     let number = number + 5;
     let number = number * 2;
     println!("The number is {}.", number); // 20
+
+    // str과 String
+    // str은 문자열 데이터의 뷰. 대부분의 경우 &str 형식을 사용.
+    // &str을 변경할 수 없는 문자열에 대한 포인터로 생각할 수 있다.
+    // String은 변경될 수 있는 문자열 데이터. 힙에 할당된다.
+
+    // Create a String from a string literal
+    let mut hello = String::from("Hello, ");  
+
+    // Push a character into our String
+    hello.push('w');
+    
+    // Push a string literal into our String       
+    hello.push_str("orld!");
+             
+    println!("{}", hello)
 }
