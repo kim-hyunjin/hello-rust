@@ -1,3 +1,16 @@
+// A struct with named fields
+struct Person {
+    name: String,
+    age: u8,
+    likes_oranges: bool,
+}
+
+// A tuple struct
+struct Point2D(u32, u32);
+
+// A unit struct
+struct Unit;
+
 fn main() {
     let a_number = 10;
     let a_boolean = true;
@@ -54,4 +67,25 @@ fn main() {
     assert_eq!(tuple.2, 'c');
 
     println!("{}", tuple.0);  // prints "hello"
+
+    // 구조체
+    // Instantiate a classic struct, with named fields. Order does not matter.
+    let person = Person {
+        name: String::from("Adam"),
+        likes_oranges: true,
+        age: 25
+    };
+
+    // Instantiate a tuple struct by passing the values in the same order as defined.
+    let _origin = Point2D(0, 0);
+
+    // Instantiate a unit struct.
+    let _unit = Unit;
+
+    // Display the details of the person
+    if person.likes_oranges {
+        println!("{:?} is {:?} and likes oranges.", person.name, person.age);  
+    } else {
+        println!("{:?} is {:?} and doesn't like oranges.", person.name, person.age);  
+    }
 }
