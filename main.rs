@@ -11,6 +11,21 @@ struct Point2D(u32, u32);
 // A unit struct
 struct Unit;
 
+enum WebEvent {
+    PageLoad,
+    PageUnload,
+    KeyPress(KeyPress),
+    Paste(String),
+    Click(Click)
+}
+
+struct Click { 
+    x: i64, 
+    y: i64 
+}
+
+struct KeyPress(char);
+
 fn main() {
     let a_number = 10;
     let a_boolean = true;
