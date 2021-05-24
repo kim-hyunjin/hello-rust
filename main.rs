@@ -40,5 +40,18 @@ fn main() {
     // Push a string literal into our String       
     hello.push_str("orld!");
              
-    println!("{}", hello)
+    println!("{}", hello);
+
+    // 튜플
+    // 튜플은 하나의 복합으로 수집되는 다양한 형식의 값을 그룹화한 것이다.
+    // 고정길이를 가진다. 즉, 선언된 후 크기를 늘리거나 줄일 수 없다.
+    // 튜플의 형식은 각 멤버의 형식 시퀀스로 정의된다.
+    let tuple = ("hello", 5i32, 'c'); //(&'static str, i32, char)
+
+    // assert_eq! 매크로는 두 식이 서로 같은지 확인합니다.
+    assert_eq!(tuple.0, "hello");
+    assert_eq!(tuple.1, 5);
+    assert_eq!(tuple.2, 'c');
+
+    println!("{}", tuple.0);  // prints "hello"
 }
